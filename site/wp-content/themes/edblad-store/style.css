@@ -1,0 +1,101 @@
+/*
+Theme Name: Edblad Store
+Theme URI: https://edblad.com
+Author: Edblad
+Author URI: https://edblad.com
+Description: Hybrid WordPress theme for Edblad. Full Site Editing for content pages (home, about, contact), custom WooCommerce PHP templates for the store (shop, product, cart, checkout). Minimal Scandinavian design system built on stainless steel, sterling silver, and 14K gold accents.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: edblad-store
+Tags: e-commerce, custom-colors, custom-menu, editor-style, full-site-editing, block-patterns
+*/
+
+:root {
+  /* Color — raw palette */
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+  --color-gold: #c9a96e;
+  --color-grey: #f5f4f1;
+
+  /* Color — semantic aliases */
+  --color-bg: var(--color-white);
+  --color-surface: var(--color-grey);
+  --color-text: var(--color-black);
+  --color-text-muted: rgba(26, 26, 26, 0.6);
+  --color-text-inverse: var(--color-white);
+  --color-accent: var(--color-gold);
+  --color-border: rgba(26, 26, 26, 0.12);
+
+  /* Typography — families */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Typography — weights (never exceed 500) */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* Typography — tracking */
+  --ls-heading: 0.04em;
+  --ls-body: 0.01em;
+  --ls-label: 0.15em;
+
+  /* Typography — line height */
+  --lh-heading: 1.2;
+  --lh-body: 1.7;
+
+  /* Typography — fluid scale */
+  --fs-hero: clamp(2.75rem, 2rem + 3vw, 4.5rem);
+  --fs-h2: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --fs-h3: clamp(1.625rem, 1.4rem + 1vw, 2.25rem);
+  --fs-h4: clamp(1.375rem, 1.25rem + 0.5vw, 1.75rem);
+  --fs-h5: clamp(1.125rem, 1.05rem + 0.3vw, 1.375rem);
+  --fs-h6: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --fs-body: 1rem;
+  --fs-price: clamp(0.875rem, 0.85rem + 0.1vw, 1rem);
+  --fs-label: clamp(0.6875rem, 0.65rem + 0.1vw, 0.75rem);
+  --fs-caption: clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+
+  /* Spacing scale (8px baseline) */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 0.75rem;  /* 12px */
+  --space-3: 1rem;     /* 16px */
+  --space-4: 1.5rem;   /* 24px */
+  --space-5: 2rem;     /* 32px */
+  --space-6: 3rem;     /* 48px */
+  --space-7: 4rem;     /* 64px */
+  --space-8: 5rem;     /* 80px */
+
+  --section-padding: var(--space-6);
+  --gutter: 1rem;
+
+  /* Layout */
+  --container-max: 1280px;
+  --grid-columns: 12;
+
+  /* Structure (from devtools findings) */
+  --announcement-height: 30px;
+  --nav-height: 92px;
+
+  /* Radius */
+  --radius-max: 2px;
+
+  /* Motion */
+  --transition: 300ms ease;
+
+  /* Breakpoints (reference values — hard-coded in media queries in component CSS) */
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-desktop-lg: 1280px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding: var(--space-8);
+    --gutter: 1.5rem;
+  }
+}
